@@ -1,0 +1,261 @@
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary: #3650ff;
+  --primary-dark: #1f2cd3;
+  --accent: #ff8a5c;
+  --dark: #1d2433;
+  --muted: #5f6775;
+  --muted-light: #8f96a7;
+  --bg-soft: #f5f7ff;
+  --card: #ffffff;
+  --shadow: 0 20px 45px -25px rgba(12, 33, 80, 0.35);
+}
+
+body {
+  font-family: Raleway, sans-serif;
+  background: #f7f9fc;
+  color: var(--dark);
+  line-height: 1.7;
+  padding-top: 88px;
+}
+
+.bg-nav {
+  background-color: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(54, 80, 255, 0.08);
+  transition: background-color 0.3s ease;
+}
+
+.mt--2 {
+  margin-top: -0.4rem !important;
+}
+
+.navbar-brand span {
+  letter-spacing: 0.02em;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.98rem;
+  letter-spacing: 0.015em;
+  transition: color 0.3s ease;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link.active {
+  color: var(--primary) !important;
+}
+
+.badge {
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  box-shadow: 0 14px 24px -12px rgba(54, 80, 255, 0.75);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+.btn-outline-primary {
+  color: var(--primary);
+  border-color: rgba(54, 80, 255, 0.45);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background: rgba(54, 80, 255, 0.12);
+  color: var(--primary-dark);
+  border-color: rgba(54, 80, 255, 0.6);
+}
+
+.hero {
+  min-height: calc(100vh - 88px);
+  padding: 6rem 0 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  right: -12rem;
+  top: -10rem;
+  width: 36rem;
+  height: 36rem;
+  background: radial-gradient(circle at center, rgba(54, 80, 255, 0.16), transparent 65%);
+  z-index: -1;
+}
+
+.hero-image {
+  max-width: 420px;
+  width: 100%;
+  filter: drop-shadow(0 28px 40px rgba(15, 35, 90, 0.25));
+}
+
+.section-padding {
+  padding: 6rem 0;
+}
+
+.bg-soft {
+  background: var(--bg-soft);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.highlight-card,
+.info-card {
+  background: var(--card);
+  border-radius: 24px;
+  padding: 1.75rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1rem;
+}
+
+.highlight-card i,
+.info-card i {
+  font-size: 1.75rem;
+  color: var(--primary);
+}
+
+.highlight-card h5,
+.info-card h5 {
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.highlight-card p,
+.info-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.info-card {
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.icon-wrap {
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(54, 80, 255, 0.08);
+  color: var(--primary);
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+}
+
+.vision-list {
+  padding-left: 1.2rem;
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.vision-list li + li {
+  margin-top: 0.75rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.contact-item i {
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+.contact-item .label {
+  display: block;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.contact-form .form-control {
+  border-radius: 16px;
+  border: 1px solid rgba(31, 44, 211, 0.12);
+  padding: 0.85rem 1.1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form .form-control:focus {
+  border-color: rgba(54, 80, 255, 0.6);
+  box-shadow: 0 0 0 0.2rem rgba(54, 80, 255, 0.15);
+}
+
+.footer {
+  border-top: 1px solid rgba(31, 44, 211, 0.08);
+}
+
+.footer .link a {
+  color: var(--muted);
+}
+
+.footer .link a:hover {
+  color: var(--primary);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 991.98px) {
+  body {
+    padding-top: 76px;
+  }
+
+  .hero {
+    padding-top: 7rem;
+  }
+
+  .navbar-light .navbar-nav .nav-link {
+    padding: 0.75rem 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero {
+    min-height: auto;
+    padding: 5rem 0 3rem;
+  }
+
+  .section-title {
+    font-size: 2.1rem;
+  }
+
+  .highlight-card,
+  .info-card {
+    padding: 1.5rem;
+  }
+}
